@@ -15,21 +15,21 @@
 
 **앱 이름** (30자 이내)
 ```
-DMRBridge 클라이언트
+DVBridge 클라이언트
 ```
 
 **간단한 설명** (80자 이내)
 ```
-DMRBridge 서버에 붙어 DMR 무전을 듣고 말하는 아마추어 무선용 앱. 큰 글씨·큰 버튼.
+DVBridge 서버에 붙어 DMR 무전을 듣고 말하는 아마추어 무선용 앱. 큰 글씨·큰 버튼.
 ```
 
 **자세한 설명** (4000자 이내)
 ```
-DMRBridge 클라이언트는 아마추어 무선 DMR 중계 서버 "DMRBridge"에 접속해
+DVBridge 클라이언트는 아마추어 무선 DMR 중계 서버 "DVBridge"에 접속해
 BrandMeister 등 DMR 네트워크의 무전을 듣고 말하는 앱입니다.
 
 ■ 이런 분께
-· DMRBridge 서버를 운영하는 클럽·개인의 회원
+· DVBridge 서버를 운영하는 클럽·개인의 회원
 · 무전기 대신 휴대폰으로 DMR 무전에 참여하고 싶은 아마추어 무선사
 
 ■ 주요 기능
@@ -42,14 +42,14 @@ BrandMeister 등 DMR 네트워크의 무전을 듣고 말하는 앱입니다.
 · 글자 크기 3단계, 밝게/어둡게 화면 — 어르신도 보기 쉽게
 
 ■ 꼭 읽어 주세요
-· 이 앱만으로는 쓸 수 없습니다. DMRBridge 서버 주소와 포트를 운영자에게 받아야 합니다.
+· 이 앱만으로는 쓸 수 없습니다. DVBridge 서버 주소와 포트를 운영자에게 받아야 합니다.
 · 송신하려면 아마추어 무선국 허가(콜사인)와 DMR ID가 필요합니다.
 · 음성 변환은 서버가 하므로 앱에 보코더가 들어 있지 않습니다.
 
 ■ 개인정보
-입력한 콜사인·이름 등은 사용자가 지정한 DMRBridge 서버에만 보내며, 광고·분석 기능이 없습니다.
+입력한 콜사인·이름 등은 사용자가 지정한 DVBridge 서버에만 보내며, 광고·분석 기능이 없습니다.
 
-오픈소스(MIT): https://github.com/seunghunchoi-dev/dmrbridge-client-android
+오픈소스(MIT): https://github.com/seunghunchoi-dev/dvbridge-client-android
 제작자: 6K2KZR 최승훈
 ```
 
@@ -69,7 +69,7 @@ BrandMeister 등 DMR 네트워크의 무전을 듣고 말하는 앱입니다.
 - [ ] 첫 업로드는 `.aab` 파일
 
 ## 앱 콘텐츠 (정책)
-- [ ] **개인정보처리방침 URL**: `https://github.com/seunghunchoi-dev/dmrbridge-client-android/blob/main/PRIVACY.md`
+- [ ] **개인정보처리방침 URL**: `https://github.com/seunghunchoi-dev/dvbridge-client-android/blob/main/PRIVACY.md`
 - [ ] **데이터 보안** 양식
   - 수집: *오디오 → 음성 녹음* (앱 기능 — 말하기에 필요), *개인 정보 → 이름*, *기기 또는 기타 ID: 없음*
   - "사용자가 지정한 서버로 전송" → Google 기준으로는 **공유 아님**(사용자가 시작한 전송), **수집함**으로 표시
@@ -88,7 +88,7 @@ BrandMeister 등 DMR 네트워크의 무전을 듣고 말하는 앱입니다.
 - [x] targetSdk 36 (2026-08-31부터 새 앱·업데이트 필수)
 - [x] 64비트 포함 (arm64-v8a, x86_64)
 - [x] 16KB 메모리 페이지: 네이티브 라이브러리(`libandroidx.graphics.path.so`) LOAD 정렬 0x4000 확인
-- [x] 앱 고유 이름 `io.github.seunghunchoidev.dmrbridgeclient` (출시 후 변경 불가)
+- [x] 앱 고유 이름 `io.github.seunghunchoidev.dvbridgeclient` (출시 후 변경 불가)
 - [x] 백업 끔(`allowBackup=false`), 광고·분석 SDK 없음
 
 ## 주의

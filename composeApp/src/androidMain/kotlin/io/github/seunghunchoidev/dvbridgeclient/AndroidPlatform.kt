@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 // Copyright (c) 2026 최승훈 (Choi Seunghun, 6K2KZR)
-package io.github.seunghunchoidev.dmrbridgeclient
+package io.github.seunghunchoidev.dvbridgeclient
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -37,7 +37,7 @@ class AndroidStore(ctx: Context) : KeyValueStore {
 }
 
 class AndroidPlatform(ctx: Context) : PlatformInfo {
-    override val appLabel = "DMRBridge Client $APP_VERSION (Android ${Build.VERSION.RELEASE})"
+    override val appLabel = "DVBridge Client $APP_VERSION (Android ${Build.VERSION.RELEASE})"
     override val defaultDevice = DeviceInfo.detect(ctx)
     override val isDesktop = false
 }

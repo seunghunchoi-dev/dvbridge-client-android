@@ -1,4 +1,4 @@
-// DMRBridge 클라이언트 (안드로이드) — MIT, Copyright (c) 2026 최승훈 (Choi Seunghun, 6K2KZR)
+// DVBridge 클라이언트 (안드로이드) — MIT, Copyright (c) 2026 최승훈 (Choi Seunghun, 6K2KZR)
 import java.util.Properties
 
 plugins {
@@ -25,7 +25,7 @@ kotlin {
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
             }
         }
-        // PC판(dmrbridge-client-pc)과 똑같은 공통 코드: 통신·변환·상태·화면
+        // PC판(dvbridge-client-pc)과 똑같은 공통 코드: 통신·변환·상태·화면
         val jvmShared by creating { dependsOn(commonMain) }
         val androidMain by getting {
             dependsOn(jvmShared)
@@ -39,17 +39,17 @@ kotlin {
 }
 
 android {
-    namespace = "io.github.seunghunchoidev.dmrbridgeclient"
+    namespace = "io.github.seunghunchoidev.dvbridgeclient"
     compileSdk = 36
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     sourceSets["main"].res.srcDirs("src/androidMain/res")
 
     defaultConfig {
-        applicationId = "io.github.seunghunchoidev.dmrbridgeclient"
+        applicationId = "io.github.seunghunchoidev.dvbridgeclient"
         minSdk = 26
         targetSdk = 36   // Google Play: 2026-08-31부터 새 앱·업데이트는 Android 16(API 36) 대상이어야 함
-        versionCode = 4
-        versionName = "0.4"
+        versionCode = 5
+        versionName = "0.5"
     }
 
     // 서명 키는 저장소에 넣지 않는다: keystore.properties(storeFile, storePassword, keyAlias, keyPassword)가 있을 때만 서명
