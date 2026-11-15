@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 직접 그린 아이콘: 무전기(안테나·화면·말하기 버튼) + 전파 두 줄 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <!-- 안테나 -->
+    <path android:fillColor="#FFFFFF" android:pathData="M40,30 h5 v14 h-5 z" />
+    <!-- 몸체 (가운데 구멍 두 개: 화면, 버튼) -->
+    <path android:fillColor="#FFFFFF" android:fillType="evenOdd"
+        android:pathData="M36,44 h26 a4,4 0 0 1 4,4 v28 a4,4 0 0 1 -4,4 h-26 a4,4 0 0 1 -4,-4 v-28 a4,4 0 0 1 4,-4 z
+                          M38,49 h22 v9 h-22 z
+                          M49,69 m-5,0 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0" />
+    <!-- 전파 -->
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="3.5" android:strokeLineCap="round"
+        android:pathData="M70,40 a10,10 0 0 1 0,14" />
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="3.5" android:strokeLineCap="round"
+        android:pathData="M76,34 a18,18 0 0 1 0,26" />
+</vector>
