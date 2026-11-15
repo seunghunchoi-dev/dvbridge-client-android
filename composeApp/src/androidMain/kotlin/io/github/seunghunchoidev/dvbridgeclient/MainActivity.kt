@@ -57,21 +57,30 @@ class MainActivity : ComponentActivity() {
         setContent { App(model, platform) }
     }
 
-    // 볼륨 아래 버튼 = 말하기 (설정에서 켰을 때, 화면이 열려 있을 때만)
+    // 말하기 버튼으로 쓰는 기기 버튼 (화면이 열려 있을 때만):
+    //  - 볼륨 아래 버튼 (설정에서 켰을 때)
+    //  - 직접 지정한 버튼 (무전기폰의 PTT 버튼 등, 설정 → "버튼 지정하기" 후 한 번 누르면 그 버튼 번호를 기억)
     private var keyDown = false
-    override fun onKeyDown(keyCode: Int, event: KeyEvent): Boolean {
-        if (model.volumeKeyPtt && keyCode == KeyEvent.KEYCODE_VOLUME_DOWN) {
-            if (event.repeatCount == 0 && !keyDown) { keyDown = true; model.pttPress() }
-            return true
-        }
-        return super.onKeyDown(keyCode, event)
-    }
+    private val reserved = setOf(KeyEvent.KEYCODE_BACK, KeyEvent.KEYCODE_HOME, KeyEvent.KEYCODE_POWER, KeyEvent.KEYCODE_APP_SWITCH)
+    private fun isPttKey(code: Int) = (model.volumeKeyPtt && code == KeyEvent.KEYCODE_VOLUME_DOWN) || (model.pttKey != 0 && code == model.pttKey)
 
-    override fun onKeyUp(keyCode: Int, event: KeyEvent): Boolean {
-        if (model.volumeKeyPtt && keyCode == KeyEvent.KEYCODE_VOLUME_DOWN) {
-            if (keyDown) { keyDown = false; model.pttRelease() }
+    override fun dispatchKeyEvent(event: KeyEvent): Boolean {
+        val code = event.keyCode
+        if (model.learningKey && event.action == KeyEvent.ACTION_DOWN && code !in reserved) {
+            model.learningKey = false
+            model.pttKey = code
+            AndroidStore(this).put("ptt_key", code)
+            model.toast = "이 버튼을 말하기 버튼으로 지정했습니다"
             return true
         }
-        return super.onKeyUp(keyCode, event)
+        if (model.learningKey && event.action == KeyEvent.ACTION_UP) return true
+        if (isPttKey(code)) {
+            when (event.action) {
+                KeyEvent.ACTION_DOWN -> if (event.repeatCount == 0 && !keyDown) { keyDown = true; model.pttPress() }
+                KeyEvent.ACTION_UP -> if (keyDown) { keyDown = false; model.pttRelease() }
+            }
+            return true
+        }
+        return super.dispatchKeyEvent(event)
     }
 }

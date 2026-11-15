@@ -48,8 +48,8 @@ android {
         applicationId = "io.github.seunghunchoidev.dvbridgeclient"
         minSdk = 26
         targetSdk = 36   // Google Play: 2026-08-31부터 새 앱·업데이트는 Android 16(API 36) 대상이어야 함
-        versionCode = 6
-        versionName = "0.5.1"
+        versionCode = 7
+        versionName = "0.5.2"
     }
 
     // 서명 키는 저장소에 넣지 않는다: keystore.properties(storeFile, storePassword, keyAlias, keyPassword)가 있을 때만 서명

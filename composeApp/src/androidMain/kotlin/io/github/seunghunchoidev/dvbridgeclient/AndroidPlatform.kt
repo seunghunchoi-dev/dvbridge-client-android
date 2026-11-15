@@ -40,6 +40,7 @@ class AndroidPlatform(ctx: Context) : PlatformInfo {
     override val appLabel = "DVBridge Client $APP_VERSION (Android ${Build.VERSION.RELEASE})"
     override val defaultDevice = DeviceInfo.detect(ctx)
     override val isDesktop = false
+    override val dataDir: java.io.File = ctx.filesDir
 }
 
 /**

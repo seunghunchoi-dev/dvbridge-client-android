@@ -6,7 +6,7 @@
 |---|---|---|
 | `icon-512.png` | 앱 아이콘 | 512×512 PNG |
 | `feature-graphic-1024x500.png` | 그래픽 이미지 | 1024×500 |
-| `screenshots/*.png` | 휴대전화 스크린샷 (5장, 2~8장 가능) | 1080×2090 |
+| `screenshots/*.png` | 휴대전화 스크린샷 (6장, 2~8장 가능) | 1080×2090 |
 | `../../PRIVACY.md` | 개인정보처리방침 URL | GitHub 주소를 그대로 사용 |
 
 업로드 파일: `build_android.bat` → `composeApp/build/outputs/bundle/release/composeApp-release.aab` (Android App Bundle)

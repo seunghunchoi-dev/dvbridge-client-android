@@ -1,6 +1,6 @@
 # 개인정보 처리방침 — DVBridge 클라이언트
 
-시행일: 2026년 11월 15일 · 제작자: 6K2KZR 최승훈
+시행일: 2026년 11월 15일 (0.5.2에서 DMR 주소록 항목 추가) · 제작자: 6K2KZR 최승훈
 
 DVBridge 클라이언트(이하 "앱")는 아마추어 무선 DMR 중계 서버인 **DVBridge**에 접속해 음성을 주고받는 앱입니다.
 앱 제작자는 어떤 서버도 운영하지 않으며, 앱이 제작자에게 정보를 보내는 기능은 없습니다.
@@ -15,6 +15,7 @@ DVBridge 클라이언트(이하 "앱")는 아마추어 무선 DMR 중계 서버�
 | 기기 모델명(예: Galaxy A17) | 장비명을 비워 두었을 때 기본값 | 사용자가 접속한 DVBridge 서버 |
 
 - 앱은 위 정보를 **사용자가 직접 지정한 DVBridge 서버 외에는 어디에도 보내지 않습니다.**
+- **DMR 주소록**: 일주일에 한 번(설정에서 끌 수 있음) BrandMeister(api.brandmeister.network)의 채널 목록과 RadioID.net의 한국 사용자 공개 명단을 **받아 와서** 기기 안에만 저장합니다. 이때 앱은 사용자 정보를 보내지 않으며, 상대 서버에는 일반 인터넷 접속처럼 기기의 IP 주소만 보입니다.
 - 광고, 분석 도구, 위치 정보, 연락처, 사진, 계정 로그인 기능이 없습니다.
 - 서버와의 통신은 아마추어 무선 표준 방식(USRP, UDP)이며 암호화되지 않습니다. 아마추어 무선 통신은 법적으로 공개 통신입니다.
 - DVBridge 서버를 거쳐 BrandMeister 등 공개 DMR 네트워크로 나간 음성과 콜사인은 그 네트워크의 정책에 따라 다른 무전국이 듣거나 기록할 수 있습니다.
@@ -49,6 +50,7 @@ The author does not operate any server, and the app never sends data to the auth
 
 - **Data handled**: server address/port (stored on the device only); callsign, DMR ID, name and device name entered by the user (optional) and the device model — sent only to the DVBridge server the user connects to, so that the server and other stations can see who is talking; microphone audio — captured **only while the push-to-talk button is held** and streamed live to that server, never stored by the app.
 - No ads, analytics, location, contacts, photos or account sign-in.
+- **DMR directory**: once a week (can be turned off) the app downloads the public talkgroup list from BrandMeister and the public Korean user list from RadioID.net and stores them on the device. No user data is sent; those servers only see the device IP address as with any web request.
 - Traffic uses the amateur-radio USRP protocol over UDP without encryption; amateur radio is public by law. Voice and callsign forwarded by the server to public DMR networks (e.g. BrandMeister) are subject to those networks' policies.
 - **Permissions**: microphone (push-to-talk), notifications and foreground service (keep receiving with the screen off), internet/network state/wake lock (keep the connection).
 - **Retention**: settings stay on the device and are removed when the app is uninstalled; app backup is disabled. Data sent to a server follows that server operator's policy.
