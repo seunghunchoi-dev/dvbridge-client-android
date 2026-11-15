@@ -49,7 +49,6 @@ flowchart LR
   - **내부 채널** — BrandMeister로 나가지 않고 같은 브리지 사용자끼리만 이야기하는 채널(기본 TG 99). 서버가 켜 두면 채널 탭에 버튼이 생김
   - **상대방 정보** — 서버가 RadioID 명단에서 찾은 콜사인·이름·지역, 상대 무전기가 보낸 이름표(Talker Alias)
   - **서버 알림** — 채널 변경 결과 등 서버가 보내는 안내
-- DVBridge는 기존 DVSwitch Mobile 같은 다른 USRP 앱도 받아 주지만, 이 앱은 DVBridge의 확장 정보(내 정보 보내기, 상대방 자세한 정보, 공지, 내부 채널)를 모두 쓰는 **전용 앱**입니다.
 
 통신 규격은 [docs/PROTOCOL.md](docs/PROTOCOL.md)에 정리돼 있습니다.
 
