@@ -17,7 +17,7 @@ DVBridge 서버에 붙어서 BrandMeister 등 DMR 네트워크의 무전을 휴�
 |---|---|
 | 제작자 | **6K2KZR 최승훈** |
 | 라이선스 | [MIT](LICENSE) — 자유롭게 사용·수정·재배포 (저작자 표기 유지) |
-| 내려받기 | [Releases](https://github.com/seunghunchoi-dev/dvbridge-client-android/releases) — `DVBridgeClient-0.5.apk` |
+| 내려받기 | [Releases](https://github.com/seunghunchoi-dev/dvbridge-client-android/releases) — `DVBridgeClient-0.5.1.apk` |
 | 설명서 | [Wiki](https://github.com/seunghunchoi-dev/dvbridge-client-android/wiki) (사진과 함께 따라 하기) · Releases의 PDF |
 | 같은 앱의 PC판 | [dvbridge-client-pc](https://github.com/seunghunchoi-dev/dvbridge-client-pc) — 화면·기능 같음 |
 | 서버 | [dvbridge](https://github.com/seunghunchoi-dev/dvbridge) — 이 앱이 붙는 Windows 브리지 프로그램 |
@@ -57,10 +57,10 @@ flowchart LR
 
 ## 화면과 기능
 
-일반 휴대폰은 아래쪽 탭 4개로 나뉩니다. **폴더블을 펼치거나 태블릿**처럼 화면이 넓으면 PC판과 같은 **무전기형**으로 바뀝니다
-(맨 위 지금 채널 크게 · 왼쪽 상대방 · 오른쪽 채널 버튼 · 맨 아래 가로로 긴 말하기).
+메뉴는 4개(말하기·슬롯·채널·설정)입니다. 일반 휴대폰은 아래쪽에, **폴더블을 펼치거나 태블릿**처럼 화면이 넓으면 PC판과 같이
+**같은 메뉴를 왼쪽 세로 줄**에 두고, 맨 아래에 어느 메뉴에서나 누를 수 있는 **가로로 긴 말하기 버튼**을 둡니다(Galaxy Z Fold에서 시험).
 
-<img src="docs/play-store/fold-unfolded.png" width="560" alt="폴더블 펼친 화면">
+<img src="docs/images/wide.png" width="600" alt="넓은 화면 (폴더블·태블릿·PC 같은 배치)">
 
 ### 🎙️ 말하기
 - **누르고 말하기** 큰 버튼을 누르고 있는 동안 송신, 떼면 끝
